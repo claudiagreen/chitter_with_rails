@@ -1,2 +1,9 @@
-No peeps yet
-<a href="#">Add a peep</a>
+<% if @peeps.any? %>
+  <% @peeps.each do |peep| %>
+    <h2><%= peep.message %></h2>
+  <% end %>
+<% else %>
+  <h1> No peeps yet </h1>
+<% end %>
+
+<a href='#'>Add a peep</a>
